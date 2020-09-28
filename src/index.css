@@ -1,13 +1,251 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+/* variabkes */
+:root {
+  --greyish-brown: rgba(68, 68, 68, 0.1);
+  --sky-blue: #68a7ff;
+  --squash: #f5a626;
+  --red: #ff0000;
+  --greyish-brown: ##4bb89e;
+  --water-blue: #1999d2;
+  --greeny-blue-two: #4bb89e;
+}
+
+.card {
+  width: 639px;
+  height: 377px;
+  border-radius: 3.8px;
+  box-shadow: 0 0 19px 0 rgba(68, 68, 68, 0.1);
+  border: solid 0.2px var(--greyish-brown);
+  background-color: #ffffff;
+}
+.card-header {
+  position: relative;
+  width: 639px;
+  height: 234px;
+  opacity: 0.8;
+  background-color: #000000;
+}
+.card-header-img {
+  width: 639px;
+  height: 234px;
+  opacity: 0.7;
+  z-index: -1;
+}
+.college-rating-box {
+  width: 57px;
+  height: 35px;
+  font-family: DINPro;
+  font-size: 13.5px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.33;
+  letter-spacing: normal;
+  text-align: center;
+  color: #ffffff;
+  font-size: 18.5px;
+  font-weight: bold;
+}
+
+.college-rating-container {
+  position: absolute;
+  width: 75px;
+  height: 53px;
+  border-radius: 3.8px;
+  background-color: var(--squash);
+  top: 5%;
+  left: 88%;
+}
+.rating-remark {
+  font-size: 12px;
+}
+.card-footer {
+  display: flex;
+  flex-direction: column;
+}
+.college-name {
+  position: absolute;
+  width: 42%;
+  height: 17px;
+  font-family: DINPro;
+  font-size: 18.5px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 0.97;
+  letter-spacing: normal;
+  text-align: center;
+  color: var(--greyish-brown);
+}
+
+.college-offer-text {
+  width: 347px;
+  height: 35px;
+  background-color: #ccf5e7;
+}
+
+.college-offer-text p {
+  width: 309px;
+  height: 13px;
+  font-family: DINPro;
+  font-size: 13.5px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.33;
+  letter-spacing: normal;
+  text-align: center;
+  color: var(--greyish-brown);
+}
+
+.college-nearby-places-1 {
+  width: 196px;
+  height: 13px;
+  font-family: DINPro;
+  font-size: 13.5px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.33;
+  letter-spacing: normal;
+  text-align: center;
+  color: var(--greyish-brown);
+}
+.college-nearby-places-2 {
+  width: 157px;
+  height: 13px;
+  font-family: DINPro;
+  font-size: 13.5px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.33;
+  letter-spacing: normal;
+  text-align: center;
+  color: #adadad;
+}
+
+.college-famous-nearby-places {
+  width: 358px;
+  height: 13px;
+  font-family: DINPro;
+  font-size: 13.5px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.33;
+  letter-spacing: normal;
+  text-align: center;
+  color: #adadad;
+}
+
+.college-discounted-fee {
+  width: 85px;
+  height: 26px;
+  font-family: DINPro;
+  font-size: 28.5px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 0.89;
+  letter-spacing: normal;
+  text-align: center;
+  color: #dd1c26;
+  font-family: MyriadPro;
+  text-align: center;
+}
+
+.fee-cycle {
+  width: 106px;
+  height: 10px;
+  font-family: Myriad Pro;
+  font-size: 11px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.64;
+  letter-spacing: normal;
+  text-align: center;
+  color: #444444;
+}
+.college-orignal-fee {
+  width: 37px;
+  height: 10px;
+  font-family: DINPro;
+  font-size: 11px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.64;
+  letter-spacing: normal;
+  text-align: center;
+  color: #444444;
+}
+.college-tags {
+  width: 48%;
+  font-size: 0.8em;
+  display: flex;
+  position: absolute;
+  top: 71%;
+  justify-content: space-between;
+}
+
+.college-tags p {
+  display: inline-block;
+  text-indent: -1px;
+  text-align: center;
+  width: 128px;
+  height: 21px;
+  border-radius: 16.5px;
+  background-color: #ffffff;
+  padding: 9px;
+}
+.college-amenties {
+  position: relative;
+  left: 20%;
+  margin-top: 2%;
+  /* width: 101px; */
+  height: 10px;
+  font-family: DINPro;
+  font-size: 13.5px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.33;
+  letter-spacing: normal;
+  text-align: center;
+  color: #37b396;
+}
+.college-amenties span {
+  display: inline-block;
+}
+.offer-container {
+  display: flex;
+  position: absolute;
+  justify-content: space-between;
+  top: 58%;
+}
+/* common classes */
+
+.text-style1 {
+  font-weight: bold;
+  color: #000000;
+}
+.text-style-2 {
+  color: var(--greeny-blue-two);
+}
+.text-style-3 {
+  color: var(--water-blue);
 }
