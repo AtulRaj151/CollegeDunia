@@ -5,6 +5,8 @@ class CollegeCard extends Component {
   render() {
     return (
       <div className="card">
+        <div className="promoted">PROMOTED</div>
+
         <div className="card-header">
           <img className="card-header-img" src={collegeImage} />
           <div className="college-rating-container">
@@ -21,11 +23,19 @@ class CollegeCard extends Component {
           <div className="ranking"></div>
         </div>
         <div className="card-footer">
-          <div className="college-name">
-            <span>Hansraj College of Delhi University</span>
+          <div className="college-name-rate-wrapper">
+            <div className="college-name">
+              <span>Hansraj College of Delhi University</span>
+            </div>
+            <div className="college-start-rating">
+              <span className="fa fa-star checked"></span>
+              <span className="fa fa-star checked"></span>
+              <span className="fa fa-star checked"></span>
+              <span className="fa fa-star"></span>
+              <span className="fa fa-star"></span>
+            </div>
           </div>
-          <div className="college-start-rating">4/5</div>
-          <div>
+          <div className="college-location">
             <span className="college-nearby-places-1">
               Near Vishwavidyalya Metro Station
             </span>
@@ -50,8 +60,7 @@ class CollegeCard extends Component {
               </p>
             </div>
             <div className="college-amenties">
-              <span>Free Cancellation</span>
-
+              <span>Free Cancellation</span>,&nbsp;
               <span>Free Wifi</span>
             </div>
           </div>

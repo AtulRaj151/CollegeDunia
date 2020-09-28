@@ -23,12 +23,58 @@ code {
 }
 
 .card {
+  position: relative;
   width: 639px;
   height: 377px;
   border-radius: 3.8px;
   box-shadow: 0 0 19px 0 rgba(68, 68, 68, 0.1);
   border: solid 0.2px var(--greyish-brown);
   background-color: #ffffff;
+}
+.promoted {
+  background-color: #68a7ff;
+  position: absolute;
+  z-index: 1;
+  width: 18%;
+  text-align: center;
+  height: 9%;
+  left: 82%;
+  top: -4%;
+  font-family: DINPro;
+  font-size: 15px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 2.2;
+  letter-spacing: normal;
+  text-align: center;
+  color: #ffffff;
+}
+.promoted::before {
+  content: "";
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-color: transparent transparent #68a7ff;
+  position: absolute;
+  top: 34%;
+  left: -26%;
+  border-width: 0 0 22px 34px;
+  box-sizing: border-box;
+}
+.promoted::after {
+  border-style: solid;
+  border-width: 22px 0 0 34px;
+  bottom: 0;
+  right: -14px;
+  left: -26%;
+  content: "";
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-color: #68a7ff transparent transparent;
+  position: absolute;
+  top: 1%;
 }
 .card-header {
   position: relative;
@@ -65,8 +111,8 @@ code {
   height: 53px;
   border-radius: 3.8px;
   background-color: var(--squash);
-  top: 5%;
-  left: 88%;
+  top: 15%;
+  left: 86%;
 }
 .rating-remark {
   font-size: 12px;
@@ -76,8 +122,6 @@ code {
   flex-direction: column;
 }
 .college-name {
-  position: absolute;
-  width: 42%;
   height: 17px;
   font-family: DINPro;
   font-size: 18.5px;
@@ -91,9 +135,11 @@ code {
 }
 
 .college-offer-text {
-  width: 347px;
+  width: 53%;
   height: 35px;
+  border-bottom-right-radius: 20px;
   background-color: #ccf5e7;
+  border-top-right-radius: 20px;
 }
 
 .college-offer-text p {
@@ -136,8 +182,20 @@ code {
   text-align: center;
   color: #adadad;
 }
+.college-start-rating {
+  display: inline-block;
+}
+
+.college-name-rate-wrapper {
+  width: 58%;
+  display: flex;
+  justify-content: space-between;
+  margin-left: 2%;
+  margin-top: 2%;
+}
 
 .college-famous-nearby-places {
+  position: absolute;
   width: 358px;
   height: 13px;
   font-family: DINPro;
@@ -149,11 +207,18 @@ code {
   letter-spacing: normal;
   text-align: center;
   color: #adadad;
+  left: 2%;
+  top: 80%;
+}
+.college-fee {
+  position: absolute;
+  left: 85%;
 }
 
 .college-discounted-fee {
-  width: 85px;
-  height: 26px;
+  height: 13px;
+  position: absolute;
+  left: -26%;
   font-family: DINPro;
   font-size: 28.5px;
   font-weight: bold;
@@ -179,6 +244,9 @@ code {
   letter-spacing: normal;
   text-align: center;
   color: #444444;
+  display: block;
+  margin-top: 50%;
+  margin-left: -34%;
 }
 .college-orignal-fee {
   width: 37px;
@@ -214,9 +282,8 @@ code {
 }
 .college-amenties {
   position: relative;
-  left: 20%;
+  left: -4%;
   margin-top: 2%;
-  /* width: 101px; */
   height: 10px;
   font-family: DINPro;
   font-size: 13.5px;
@@ -232,10 +299,16 @@ code {
   display: inline-block;
 }
 .offer-container {
+  width: 100%;
   display: flex;
   position: absolute;
   justify-content: space-between;
-  top: 58%;
+  top: 88%;
+}
+.college-location {
+  position: absolute;
+  top: 72%;
+  left: 2%;
 }
 /* common classes */
 
