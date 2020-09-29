@@ -21,8 +21,14 @@ code {
   --water-blue: #1999d2;
   --greeny-blue-two: #4bb89e;
 }
+.main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
 
 .card {
+  margin: 25px 25px;
   position: relative;
   width: 639px;
   height: 377px;
@@ -215,6 +221,52 @@ code {
   left: 85%;
 }
 
+.college-discount-percent {
+  display: inline-block;
+  position: absolute;
+  width: 29px;
+  height: 14px;
+  background-color: #dd1c26;
+  color: white;
+  left: 33%;
+  top: 7%;
+  font-size: 0.8em;
+  text-align: center;
+}
+/* .college-discount-percent::before {
+  content: "";
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-color: transparent transparent #dd1c26;
+  position: absolute;
+  top: 4%;
+  left: 21%;
+  border-width: 0 0 15px 18px;
+  box-sizing: border-box;
+  transform: rotate(45deg);
+} */
+
+.college-discount-percent li {
+  font-size: 0.8em;
+  letter-spacing: 1px;
+  text-align: center;
+}
+.college-discount-percent::after {
+  border-style: solid;
+  border-width: 9px 0 0 9px;
+  bottom: 0;
+  right: -14px;
+  left: -16%;
+  content: "";
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-color: #dd1c26 transparent transparent;
+  position: absolute;
+  top: 16%;
+  transform: rotate(226deg);
+}
 .college-discounted-fee {
   height: 13px;
   position: absolute;
