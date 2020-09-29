@@ -3,7 +3,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 Hosted Link : https://atulraj151.github.io/CollegeDunia/
 
 ## Description
-- A list of colleges showing details and implemented infinite scroll.
+- A list of colleges showing details and implemention of infinite scroll.
 
 ## TechStack 
 - HTML
