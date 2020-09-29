@@ -6,12 +6,15 @@ import InfiniteScroll from "react-infinite-scroll-component";
 class App extends React.Component {
   constructor() {
     super();
+    // state for infinite scroll
     this.state = {
       colleges: [],
       index: 0,
       hasMore: true,
     };
   }
+
+  //  first include some collgees
   componentDidMount() {
     const { colleges } = data;
     let newCollege = [colleges[0], colleges[1], colleges[2], colleges[3]];
@@ -21,13 +24,15 @@ class App extends React.Component {
       index: 4,
     });
   }
+
+  // function to loadmore colleges
   loadmore = () => {
     console.log("index", this.state.index);
     if (this.state.index >= data.colleges.length - 1) {
       this.setState({ hasMore: false });
       return;
     }
-
+    // add college
     this.setState({
       colleges: [
         ...this.state.colleges,
@@ -41,6 +46,8 @@ class App extends React.Component {
     });
   };
 
+  // render the methods
+
   render() {
     // const { colleges } = data;
     console.log("this state changes", this.state.colleges);
@@ -50,6 +57,8 @@ class App extends React.Component {
           {/* {colleges.map((college, index) => (
             <CollegeCard college={college} key={index} />
           ))} */}
+
+          {/* InfinteScroll */}
           <InfiniteScroll
             dataLength={this.state.colleges.length}
             className="main"
