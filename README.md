@@ -9,4 +9,4 @@ Hosted Link : https://atulraj151.github.io/CollegeDunia/
 - HTML
 - CSS
 - JAVASCRIPT
-- REACT
+- REACT JS
